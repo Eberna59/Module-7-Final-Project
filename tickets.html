@@ -52,13 +52,39 @@
                     <input id="email" name="email" type="email" required>
 
                     <label>Ticket Type</label>
-                    
+                    <label><input type="radio" name="ticket" value="Single" checked> Single Day</label>
+                    <label><input type="radio" name="ticket" value="season"> Season Pass</label>
+
+                    <label for="date"> Visit Date</label>
+                    <input id="date" name="date" type="date">
+
+                    <label for="extras">Extras</label>
+                    <select id="extras" name="extras">
+                        <option value="none">None</option>
+                        <option value="fast">Fast Pass</option>
+                        <option value="meal">Meal Plan</option>
+                    </select>
+
+                    <label><input type="checkbox" name="agree" required> I agree to the parks policies.</label>
+
+                    <button type="submit">Reserve</button>
                 </fieldset>
             </form>
-        </section>
 
-        
-    </main>
+            <aside class="card">
+                <h3>Need Help?</h3>
+                <p>Contact our ticketing support at <a href="mailto:tickets@wonderpark.com">tickets@wonderpark.com</a></p>
+            </aside>
+      
+        </section>
+  </main>
+
+  <footer class="site_footer">
+    <div class="wrap">
+        <p>&copy; Evan Berna | Wonder Park</p>
+    </div>
+  </footer>
+
     
 </body>
 </html>
