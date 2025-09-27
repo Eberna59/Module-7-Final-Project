@@ -1,69 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dining</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderPark | Dining</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- SEO Metadata -->
+  <meta name="description" content="Explore WonderPark’s dining options including King Valley Cafe and Basileus Diner. Family friendly meals, snacks, and seasonal treats await!">
+  <meta name="keywords" content="WonderPark, dining, food, cafe, diner, theme park meals, family dining">
+  <meta name="author" content="Evan Berna">
+
+  <!-- Internal CSS styled to match Index & Events -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff; /* White background */
+      color: #333; /* Dark text */
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #003366; /* Blue header/footer */
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
+    header img {
+      height: 60px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #cc0000; /* Red hover/active */
+      color: #fff;
+    }
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #cc0000; /* Red headings */
+    }
+    .card {
+      background: #f9f9f9; /* Light card background */
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+    .restaurant {
+      margin-bottom: 20px;
+    }
+    .restaurant img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+    }
+    a {
+      color: #cc0000; /* Red links */
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+    .footer_btn {
+      display: inline-block;
+      background: #cc0000;
+      color: #fff;
+      padding: 8px 14px;
+      margin-top: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .footer_btn:hover {
+      background: #ff4444;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-footer">
-        <div class="wrap header-inner">
-            <a class="brand" href="index.html">
-                <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="wonder park logo">
-            </a>
-            <nav>
-                <ul class="main_nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tickets.html">Tickets</a></li>
-                    <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
-                    <li><a href="dining.html">Dining</a></li>
-                    <li><a href="rides.html">Rides</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="map.html">Map</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="help_faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="WonderPark logo">
+      </a>
+      <nav>
+        <ul class="main_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
+          <li><a href="dining.html" class="active">Dining</a></li>
+          <li><a href="rides.html">Rides</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="help_faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="wrap">
-        <section class="card">
-            <h1>Dining</h1>
-            <p>Three Amazing Full Service Resturants For Everyone !</p>
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="wrap">
+    <section class="card">
+      <h1>Dining</h1>
+      <p>Three amazing full-service restaurants await you at WonderPark! From family-friendly breakfasts to gourmet dining, there’s something for everyone.</p>
 
-            <section>
-                <h2>Featured Resturants</h2>
-                <article>
-                    <h3>King Valley Cafe</h3>
-                    <figure>
-                        <img src="images/" alt="food">
-                        <figcaption>"Your Morning Breakfest"</figcaption>
-                    </figure>
-                    <p>Open 9:00 am - 9:00 pm</p>
-                </article>
+      <!-- Featured Restaurants -->
+      <section>
+        <h2>Featured Restaurants</h2>
 
-                <article>
-                    <h3>Basileus Diner</h3>
-                    <figure>
-                        <img src="images/" alt="food">
-                        <figcaption>A Diner with a Sophisticated Touch !</figcaption>
-                    </figure>
-                    <p>Open 9:00 am - 9:00 pm</p>
-                </article>
-            </section>
+        <article class="restaurant">
+          <h3>King Valley Cafe</h3>
+          <figure>
+            <img src="images/cafe.jpg" alt="Breakfast meal at King Valley Cafe">
+            <figcaption>Your Morning Breakfast Spot</figcaption>
+          </figure>
+          <p><strong>Hours:</strong> 9:00 am – 9:00 pm</p>
+        </article>
 
-            <section>
-                <h2>Meal Deal</h2>
-                <p>Purchase a Meal Deal on the <a href="tickets.html">Tickets</a> Page to save 20% on a meal.</p>
-            </section>
-        </section>
-    </main>
-    <footer class="site_footer">
-        <p>&copy; 2025 Evan Berna | WonderPark</p>
-        <p>59 Grey Street, Wonder City, USA</p>
-        <a href="contact.html" class="footer_btn">Contact Us</a>
-    </footer> 
+        <article class="restaurant">
+          <h3>Basileus Diner</h3>
+          <figure>
+            <img src="images/diner.jpg" alt="Classic diner food at Basileus Diner">
+            <figcaption>A Diner with a Sophisticated Touch</figcaption>
+          </figure>
+          <p><strong>Hours:</strong> 9:00 am – 9:00 pm</p>
+        </article>
+
+        <article class="restaurant">
+          <h3>Dragon’s Feast Hall</h3>
+          <figure>
+            <img src="images/feast.jpg" alt="Feast hall banquet">
+            <figcaption>Epic meals in a medieval-themed hall</figcaption>
+          </figure>
+          <p><strong>Hours:</strong> 11:00 am – 10:00 pm</p>
+        </article>
+      </section>
+
+      <!-- Meal Deal Section -->
+      <section>
+        <h2>Meal Deals</h2>
+        <p>Save big with our <mark>Meal Deals</mark>. Purchase one when buying your <a href="tickets.html">Tickets</a> and get <strong>20% off</strong> at select restaurants!</p>
+      </section>
+
+      <!-- Aside with Extra Info -->
+      <aside class="card">
+        <h3>Allergy & Dietary Options</h3>
+        <p>We offer vegetarian, vegan, and gluten-free options at all major restaurants. <a href="contact.html">Contact us</a> in advance for special requests.</p>
+      </aside>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site_footer">
+    <p>&copy; 2025 Evan Berna | WonderPark</p>
+    <address>59 Grey Street, Wonder City, USA</address>
+    <a href="contact.html" class="footer_btn">Contact Us</a>
+  </footer>
 </body>
 </html>

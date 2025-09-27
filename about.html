@@ -1,54 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderPark | About</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Internal CSS styled consistently with other pages -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #004aad;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
+    header img {
+      height: 60px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #cc0000;
+      color: #fff;
+    }
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #cc0000;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    footer {
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+    .footer_btn {
+      display: inline-block;
+      background: #cc0000;
+      color: #fff;
+      padding: 8px 14px;
+      margin-top: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .footer_btn:hover {
+      background: #ff4444;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-footer">
-        <div class="wrap header-inner">
-            <a class="brand" href="index.html">
-                <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="wonder park logo">
-            </a>
-            <nav>
-                <ul class="main_nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tickets.html">Tickets</a></li>
-                    <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
-                    <li><a href="dining.html">Dining</a></li>
-                    <li><a href="rides.html">Rides</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="map.html">Map</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="help_faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="WonderPark logo">
+      </a>
+      <nav>
+        <ul class="main_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="rides.html">Rides</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="help_faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="wrap">
-        <section class="card">
-            <h1> About Wonder Park</h1>
-            <p>Wonder Park is more than just a park it is a place designed to bring families, friends, and communities together in an atmosphere of fun, excitement, and lasting memories. Our mission is to create a world where imagination meets adventure, offering visitors an escape from the everyday through thrilling rides, immersive attractions, and unique dining experiences that satisfy every taste. From high-speed roller coasters and water rides that get your heart racing. Wonder Park has something for everyone. Beyond the rides, we provide a wide variety of restaurants, snack stands, and themed eateries that ensure guests can relax, recharge, and share meals together while exploring the park. We built Wonder Park with the belief that entertainment should inspire joy, creativity, and connection, and we aim to continuously expand and innovate with new rides, shows, and dining options that keep the park fresh and exciting year after year. By combining thrilling entertainment with welcoming hospitality, Wonder Park strives to be a destination where magical experiences happen every day, and where every visit feels like stepping into a new adventure.</p>
-            <h2>The Mission</h2>
-            <p>Our mission is to create unforgettable experiences that inspire joy, imagination, and connection for every guest who visits Wonder Park.</p>
-        </section>
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="wrap">
+    <section class="card">
+      <h1>About WonderPark</h1>
+      <p>
+        WonderPark is more than just a park—it is a place designed to bring families, friends, and communities together 
+        in an atmosphere of fun, excitement, and lasting memories. Our mission is to create a world where imagination meets adventure, 
+        offering visitors an escape from the everyday through thrilling rides, immersive attractions, and unique dining experiences. 
+        From high-speed roller coasters and water rides to live entertainment and family-friendly attractions, WonderPark has something for everyone.
+      </p>
+      <p>
+        Beyond the rides, we provide a wide variety of restaurants, snack stands, and themed eateries that ensure guests can relax, recharge, 
+        and share meals together while exploring the park. We built WonderPark with the belief that entertainment should inspire joy, creativity, 
+        and connection. Each year we strive to expand and innovate with new rides, shows, and dining options that keep the park fresh and exciting. 
+        By combining thrilling entertainment with welcoming hospitality, WonderPark strives to be a destination where magical experiences happen every day.
+      </p>
+    </section>
 
-        <section>
-            <h2>Park Fun Facts</h2>
-            <ul>
-                <li>Fastest Ride in the World</li>
-                <li>Rated Best Park of the Year</li>
-                <li>Quickest Lines</li>
-            </ul>
-        </section>
-    </main>
-    <footer class="site_footer">
-        <p>&copy; 2025 Evan Berna | WonderPark</p>
-        <p>59 Grey Street, Wonder City, USA</p>
-        <a href="contact.html" class="footer_btn">Contact Us</a>
-    </footer> 
+    <section class="card">
+      <h2>The Mission</h2>
+      <p>
+        Our mission is to create unforgettable experiences that inspire joy, imagination, and connection for every guest who visits WonderPark.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Park Fun Facts</h2>
+      <ul>
+        <li>Home to the fastest ride in the world.</li>
+        <li>Rated "Best Park of the Year" three years in a row.</li>
+        <li>Our innovative ticketing system provides some of the quickest lines in the industry.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site_footer">
+    <p>&copy; 2025 Evan Berna | WonderPark</p>
+    <p>59 Grey Street, Wonder City, USA</p>
+    <a href="contact.html" class="footer_btn">Contact Us</a>
+  </footer>
 </body>
 </html>

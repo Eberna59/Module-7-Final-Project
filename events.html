@@ -1,65 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dining</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wonder Park | Events</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="description" content="Upcoming live events at Wonder Park including shows, musicals, and main attractions.">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #004aad;
+      color: #fff;
+      padding: 15px 20px;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Events Section */
+    .events-list {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .event {
+      background: #fff;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      align-items: flex-start;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .event img {
+      width: 200px;
+      height: 130px;
+      margin-right: 15px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: #ddd;
+    }
+
+    .event-info h2 {
+      color: #004aad;
+      margin-bottom: 8px;
+    }
+
+    .event-info p {
+      margin-bottom: 6px;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer_btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #ffcc00;
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .footer_btn:hover {
+      background: #ffaa00;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-footer">
-        <div class="wrap header-inner">
-            <a class="brand" href="index.html">
-                <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="wonder park logo">
-            </a>
-            <nav>
-                <ul class="main_nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tickets.html">Tickets</a></li>
-                    <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
-                    <li><a href="dining.html">Dining</a></li>
-                    <li><a href="rides.html">Rides</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="map.html">Map</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="help_faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Header -->
+  <header>
+    <div>
+      <a href="index.html">
+        <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="Wonder Park Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="rides.html">Rides</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="help_faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="events-list">
-        <article class="event">
-            <img src="images/" alt="knights battle">
-            <div class="event-info">
-                <h2>Knights & Dragon</h2>
-                <p><strong>Date</strong> Friday 9/26 at 9:00 PM in the Aura Theater.</p>
-                <p>Come see the amazing medieval smackdown with a knight and the evil dragon.</p>
-            </div>
-        </article>
+  <!-- Events Section -->
+  <main class="events-list">
+    <article class="event">
+      <img src="images/knight.jpg" alt="Knights battle">
+      <div class="event-info">
+        <h2>Kings & Knights War</h2>
+        <p><strong>Date:</strong> Friday at 9:00 PM — Aura Theater</p>
+        <p>Witness an epic medieval showdown as brave knights face off in a dramatic battle of honor and glory.</p>
+      </div>
+    </article>
 
-        <article class="event">
-            <img src="images/" alt="romantic homicide">
-            <div class="event-info">
-                <h2>A Romantic Homicide</h2>
-                <p><strong>Date</strong> Saturday 9/27 at 4:00 PM in the Aura Theater.</p>
-                <p>A power couple of love that turns into the death of a lover.</p>
-            </div>
-        </article>
-        
-        <article class="event">
-            <img src="images/" alt="Mystery show">
-            <div class="event-info">
-                <h2>?</h2>
-                <p><strong>Date</strong>Sunday at 10:00 PM at Oval Garden.</p>
-                <p>This event is a Mystery ???</p>
-            </div>
-        </article>
-    </section>
-    <footer class="site_footer">
-        <p>&copy; 2025 Evan Berna | WonderPark</p>
-        <p>59 Grey Street, Wonder City, USA</p>
-        <a href="contact.html" class="footer_btn">Contact Us</a>
-    </footer> 
+    <article class="event">
+      <img src="images/love-musical.jpg" alt="Love Musical">
+      <div class="event-info">
+        <h2>Love Musical</h2>
+        <p><strong>Date:</strong> Saturday at 4:00 PM — Aura Theater</p>
+        <p>A heartwarming and emotional musical about love, sacrifice, and destiny. Perfect for families and couples alike.</p>
+      </div>
+    </article>
+
+    <article class="event">
+      <img src="images/dragon-show.jpg" alt="Dragon Show">
+      <div class="event-info">
+        <h2>The Dragon & His Friend</h2>
+        <p><strong>Date:</strong> Sunday at 10:00 PM — Oval Garden</p>
+        <p>Join us for the grand main event of the week — a spectacular tale of a dragon and his loyal companion under the stars.</p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Evan Berna | Wonder Park</p>
+    <p>59 Grey Street, Wonder City, USA</p>
+    <a href="contact.html" class="footer_btn">Contact Us</a>
+  </footer>
 </body>
 </html>

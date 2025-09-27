@@ -1,72 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rides</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderPark | Rides</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- SEO Metadata -->
+  <meta name="description" content="Explore WonderPark's thrilling rides including Shadow of Hell and Grey New WRLD. View height requirements, safety rules, and ride details.">
+  <meta name="keywords" content="WonderPark, rides, roller coasters, theme park attractions, safety rules">
+  <meta name="author" content="Evan Berna">
+
+  <!-- Internal CSS styled like Index & Events -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4; /* Light background */
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #004aad; /* Blue header/footer */
+      padding: 15px;
+      text-align: center;
+    }
+    header img {
+      height: 60px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #cc0000;
+      color: #fff;
+    }
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2, h3, h4 {
+      color: #cc0000; /* Red headings */
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Ride cards */
+    .ride {
+      border: 2px solid #ddd;
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 10px;
+      background-color: #fafafa;
+    }
+    #shadow {
+      background-color: #ffe6e6; /* Light red tint */
+    }
+    #grey {
+      background-color: #e6e6ff; /* Light blue tint */
+    }
+    .ride img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Hover effects */
+    .ride h2:hover {
+      color: #ff4444;
+      cursor: pointer;
+    }
+
+    /* Decorative pseudo-element */
+    .ride h2::after {
+      content: " 🎢";
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: #fff;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    table th {
+      background-color: #004aad;
+      color: #fff;
+    }
+    table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    a {
+      color: #cc0000;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      font-size: 0.9em;
+      margin-top: 30px;
+      color: #fff;
+    }
+    .footer_btn {
+      display: inline-block;
+      background: #cc0000;
+      color: #fff;
+      padding: 8px 14px;
+      margin-top: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .footer_btn:hover {
+      background: #ff4444;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-footer">
-        <div class="wrap header-inner">
-            <a class="brand" href="index.html">
-                <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="wonder park logo">
-            </a>
-            <nav>
-                <ul class="main_nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tickets.html">Tickets</a></li>
-                    <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
-                    <li><a href="dining.html">Dining</a></li>
-                    <li><a href="rides.html">Rides</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="map.html">Map</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="help_faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="WonderPark logo">
+      </a>
+      <nav>
+        <ul class="main_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="rides.html" class="active">Rides</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="help_faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main class="wrap">
-        <section class="card">
-            <h1>Rides</h1>
-            <p>Check out our ride. Hight and saftey requiremnts are shown down below.</p>
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="wrap">
+    <section class="card">
+      <h1>Rides</h1>
+      <p>WonderPark offers thrilling rides for all ages. Below you can find details about our top attractions, along with height and safety requirements.</p>
 
-            <article id="Shadow" class="ride">
-                <h2>Shadow of Hell</h2>
-                <figure>
-                    <img src="images/" alt="Shadow of Hell Ride">
-                    <figcaption>Top speed of 150 MPH & Height drop of 257 feet</figcaption>
-                </figure>
-                <p>Height Requirement: 54 inches | Extreme Thrill.</p>
-            </article>
+      <!-- Ride 1 -->
+      <article id="shadow" class="ride">
+        <h2>Shadow of Hell</h2>
+        <figure>
+          <img src="images/shadow.jpg" alt="Shadow of Hell Roller Coaster">
+          <figcaption>Top speed of <mark>150 MPH</mark> & a height drop of <mark>257 feet</mark>.</figcaption>
+        </figure>
+        <p><strong>Height Requirement:</strong> 54 inches | <em>Extreme Thrill Ride</em>.</p>
+      </article>
 
-            <article id="grey" class="ride">
-                <h2>Grey New WRLD</h2>
-                <figure>
-                    <img src="images/" alt="ride">
-                    <figcaption>A New World Depression in Grey</figcaption>
-                </figure>
-                <p>Height Requirement of 59 inches | MIGHT CAUSE DEATH </p>
-            </article>
+      <!-- Ride 2 -->
+      <article id="grey" class="ride">
+        <h2>Grey New WRLD</h2>
+        <figure>
+          <img src="images/grey.jpg" alt="Grey New WRLD Ride">
+          <figcaption>A mind-bending adventure through a surreal world.</figcaption>
+        </figure>
+        <p><strong>Height Requirement:</strong> 59 inches | <em>Intense Psychological Experience</em>.</p>
+      </article>
 
-            <section>
-                <h3>Rules & Saftey</h3>
-                <table>
-                    <thead><tr><th>Ride</th><th>Min Height</th><th>Notes</th></tr></thead>
-                    <tbody>
-                        <tr><td>Shadow of Hell</td><td>54 Inches</td><td>Not for Pregnant Guest.</td></tr>
-                        <tr><td>Grey New WRLD</td><td>59 Inches</td><td>MUST SIGN WAIVER.</td></tr>
-                    </tbody>
-                </table>
-            </section>
-        </section>
-    </main>
-    <footer class="site_footer">
-        <p>&copy; 2025 Evan Berna | WonderPark</p>
-        <p>59 Grey Street, Wonder City, USA</p>
-        <a href="contact.html" class="footer_btn">Contact Us</a>
-    </footer> 
+      <!-- Rules & Safety -->
+      <section>
+        <h3>Rules & Safety</h3>
+        <p>To ensure the safety of all guests, please review the requirements below:</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Ride</th>
+              <th>Min Height</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shadow of Hell</td>
+              <td>54 inches</td>
+              <td>Not recommended for pregnant guests or those with heart conditions.</td>
+            </tr>
+            <tr>
+              <td>Grey New WRLD</td>
+              <td>59 inches</td>
+              <td>Guests must sign a waiver before riding.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Safety Reminders List -->
+        <aside class="card">
+          <h4>General Safety Reminders</h4>
+          <ul>
+            <li>Keep arms and legs inside the ride at all times.</li>
+            <li>Follow staff instructions for boarding and exiting.</li>
+            <li>Secure all loose items before riding.</li>
+            <li>Report any issues to staff immediately.</li>
+          </ul>
+        </aside>
+      </section>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site_footer">
+    <p>&copy; 2025 Evan Berna | WonderPark</p>
+    <address>59 Grey Street, Wonder City, USA</address>
+    <a href="contact.html" class="footer_btn">Contact Us</a>
+  </footer>
 </body>
 </html>

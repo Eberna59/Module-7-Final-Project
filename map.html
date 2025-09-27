@@ -1,69 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderPark | Map</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Internal CSS styled to match Index & Rides -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #004aad;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
+    header img {
+      height: 60px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #cc0000;
+      color: #fff;
+    }
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #cc0000;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    figure {
+      text-align: center;
+      margin: 20px 0;
+    }
+    figure img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+    }
+    figcaption {
+      font-size: 0.9em;
+      color: #444;
+    }
+    nav[aria-label="map-quicklinks"] ul {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 20px 0;
+      padding: 0;
+    }
+    nav[aria-label="map-quicklinks"] ul li {
+      list-style: none;
+    }
+    nav[aria-label="map-quicklinks"] ul li a {
+      color: #004aad;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav[aria-label="map-quicklinks"] ul li a:hover {
+      color: #cc0000;
+      text-decoration: underline;
+    }
+    details {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      background: #fafafa;
+    }
+    footer {
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+    .footer_btn {
+      display: inline-block;
+      background: #cc0000;
+      color: #fff;
+      padding: 8px 14px;
+      margin-top: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .footer_btn:hover {
+      background: #ff4444;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-footer">
-        <div class="wrap header-inner">
-            <a class="brand" href="index.html">
-                <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="wonder park logo">
-            </a>
-            <nav>
-                <ul class="main_nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tickets.html">Tickets</a></li>
-                    <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
-                    <li><a href="dining.html">Dining</a></li>
-                    <li><a href="rides.html">Rides</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="map.html">Map</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="help_faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="wrap">
-        <section class="card">
-            <h1>Park Map</h1>
-            <figure>
-                <img src="images/" alt="Wonder Park Map">
-                <figcaption>See all our Rides and Food Courts.</figcaption>
-            </figure>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="WonderPark logo">
+      </a>
+      <nav>
+        <ul class="main_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="rides.html">Rides</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="map.html" class="active">Map</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="help_faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <nav aria-label="map-quicklinks">
-                <ul>
-                    <li><a href="#rides">Rides</a></li>
-                    <li><a href="#dining">Dining</a></li>
-                    <li><a href="#Services">Services</a></li>
-                </ul>
-            </nav>
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="wrap">
+    <section class="card">
+      <h1>Park Map</h1>
+      <figure>
+        <img src="images/park-map.png" alt="WonderPark Map">
+        <figcaption>See all our Rides, Dining, and Services.</figcaption>
+      </figure>
 
-            <section id="Rides">
-                <h2>Ride Area</h2>
-                <p>Shadows of Hell and Grey New WRLD are located on this zone.</p>
-            </section>
+      <!-- Quick Navigation -->
+      <nav aria-label="map-quicklinks">
+        <ul>
+          <li><a href="#Rides">Rides</a></li>
+          <li><a href="#Dining">Dining</a></li>
+          <li><a href="#Services">Services</a></li>
+        </ul>
+      </nav>
 
-             <section id="Dining">
-                <h2>Dining Area</h2>
-                <p>Dining post are located in the entrance of the park.</p>
-            </section>
+      <!-- Sections -->
+      <section id="Rides">
+        <h2>Ride Area</h2>
+        <p><mark>Shadows of Hell</mark> and <mark>Grey New WRLD</mark> are located in this zone of the park.</p>
+      </section>
 
-             <section id="Services">
-                <h2>Service Area</h2>
-                <p>Services are located in the entrance of the park.</p>
-            </section>
+      <section id="Dining">
+        <h2>Dining Area</h2>
+        <p>Our dining options are conveniently placed near the park entrance and along main pathways.</p>
+      </section>
 
-        </section>
-    </main>
-    <footer class="site_footer">
-        <p>&copy; 2025 Evan Berna | WonderPark</p>
-        <p>59 Grey Street, Wonder City, USA</p>
-        <a href="contact.html" class="footer_btn">Contact Us</a>
-    </footer> 
+      <section id="Services">
+        <h2>Service Area</h2>
+        <details>
+          <summary>Guest Services</summary>
+          <p>Guest services are located at the entrance and offer assistance with tickets, lost and found, and accessibility needs.</p>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site_footer">
+    <p>&copy; 2025 Evan Berna | WonderPark</p>
+    <p>59 Grey Street, Wonder City, USA</p>
+    <a href="contact.html" class="footer_btn">Contact Us</a>
+  </footer>
 </body>
 </html>

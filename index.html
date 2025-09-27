@@ -6,10 +6,169 @@
   <title>WonderPark — Home</title>
   <meta name="description" content="Welcome to WonderPark, the ultimate theme park with thrilling rides, fun shows, and tasty dining.">
   <link rel="icon" href="images/_vSJgdVGA692P7st7PmYW~200-1.png">
-  <link rel="stylesheet" href="main.css">
+
+  <!-- Internal CSS to match Events/Map pages -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #004aad;
+    }
+    header {
+      background-color: #004aad;
+      color: #fff;
+      padding: 15px 0;
+    }
+    header .brand img {
+      height: 50px;
+      vertical-align: middle;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav ul li a:hover, nav ul li a.active {
+      color: #ffcc00;
+    }
+    main {
+      padding: 20px;
+    }
+    .card, .hero, .offers, .attractions, .park-info, .newsletter {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    /* Hero */
+    .hero {
+      text-align: center;
+      background: #ffcc00;
+      color: #222;
+      padding: 40px 20px;
+    }
+    .hero h1 {
+      margin-bottom: 10px;
+    }
+    /* Offers */
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .offers .card {
+      text-align: center;
+      border: 2px solid #eee;
+    }
+    .offers .badge {
+      display: inline-block;
+      background: #ffcc00;
+      color: #222;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+    .offers .price {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #ffcc00;
+      color: #222;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #e6b800;
+    }
+    /* Attractions */
+    .attractions ul {
+      list-style: disc;
+      margin: 0;
+      padding-left: 20px;
+    }
+    /* Park Info Table */
+    .park-info table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .park-info th, .park-info td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    .park-info th {
+      background: #eee;
+    }
+    /* Newsletter */
+    .newsletter form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .newsletter input[type="text"],
+    .newsletter input[type="email"] {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .newsletter input[type="submit"] {
+      background-color: #ffcc00;
+      color: #222;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .newsletter input[type="submit"]:hover {
+      background-color: #e6b800;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+    .footer_btn {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #ffcc00;
+      color: #222;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .footer_btn:hover {
+      background-color: #e6b800;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header with logo and nav -->
+  <!-- Header -->
   <header class="site_header">
     <div class="wrap header_inner">
       <a class="brand" href="index.html">
@@ -41,20 +200,19 @@
 
     <!-- Special Offers -->
     <section class="offers">
-      <h2>Special Offers</h2>
-      <div class="Blue Card">
+      <div class="card">
         <span class="badge">Limited Time</span>
         <h3>Rides, Heights & Fun!</h3>
         <p class="price">$65 <span>/ea</span></p>
         <a href="tickets.html" class="btn">Buy Now</a>
       </div>
-      <div class="Black Card">
+      <div class="card">
         <h3>1 FREE PERSON</h3>
         <p class="price">$90 <span>/ea</span></p>
         <p class="note">One Ticket Two People. Available during Summer only.</p>
         <a href="tickets.html" class="btn">Buy Now</a>
       </div>
-      <div class="Gold Card">
+      <div class="card">
         <span class="badge">All Access</span>
         <h3>Gold Membership</h3>
         <p class="price">$25.99 <span>/mo</span></p>
@@ -64,7 +222,7 @@
     </section>
 
     <!-- Attractions List -->
-    <section class="attractions">
+    <section class="attractions card">
       <h2>Top Attractions</h2>
       <ul>
         <li>The Shadow of Hell</li>
@@ -74,7 +232,7 @@
     </section>
 
     <!-- Park Info Table -->
-    <section class="park-info">
+    <section class="park-info card">
       <h2>Park Highlights</h2>
       <table>
         <thead>
@@ -100,7 +258,7 @@
     </section>
 
     <!-- Newsletter Form -->
-    <section class="newsletter">
+    <section class="newsletter card">
       <h2>Stay Updated!</h2>
       <form action="#" method="post">
         <label for="name">Your Name:</label>

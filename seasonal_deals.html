@@ -1,52 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seasonal Deals</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderPark | Seasonal Deals</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- SEO Metadata -->
+  <meta name="description" content="Discover seasonal deals and holiday promotions at WonderPark. From Valentine’s Day specials to Halloween nights, enjoy big savings all year round.">
+  <meta name="keywords" content="WonderPark, seasonal deals, discounts, holiday promotions, tickets, theme park">
+  <meta name="author" content="Evan Berna">
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background-color: #004aad;
+      color: #fff;
+      padding: 15px 0;
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .header-inner img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      margin-left: 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #ff9800;
+    }
+    main {
+      width: 90%;
+      margin: 20px auto;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #ff9800;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    video {
+      display: block;
+      margin: 15px 0;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    footer a {
+      color: #ff9800;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .footer_btn {
+      display: inline-block;
+      background: #ff9800;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .footer_btn:hover {
+      background: #e68900;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="wrap header-inner">
-            <a class="brand" href="index.html">
-                <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt=logo></a>
-            <nav>
-                <ul class="main_nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tickets.html">Tickets</a></li>
-                    <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
-                    <li><a href="dining.html">Dining</a></li>
-                    <li><a href="rides.html">Rides</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="map.html">Map</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="help_faq.html">FAQ</a></li>
-            </nav>
-        </div>
-    </header>
-    <main class="wrap">
-        <section class="card">
-            <h1>Seasonal Deals</h1>
-            <p>Limited Promos & Holiday Events.</p>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="WonderPark logo">
+      </a>
+      <nav>
+        <ul class="main_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="seasonal_deals.html" class="active">Seasonal Deals</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="rides.html">Rides</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="help_faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-            <ul>
-                <li><strong>Lovers Lane!:</strong> Buy 1 Ticket Get 1 Free Entry - Valid ONLY: (FEB 14) </li>
-                <li><strong>Summer Swim!:</strong> Family 4-Pack - $169.99 - Valid: (JUNE-SEPT) </li>
-                <li><strong>Halloween Terror Nights!:</strong> Buy 1 Get 1 Next Free Entry ONE TIME USE (OCT) </li>
-                <li><strong>Santas Wonder Park!:</strong> Family 4-Pack - $199.99 - Valid (DEC) </li>
-            </ul>
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="wrap">
+    <section class="card">
+      <h1>Seasonal Deals</h1>
+      <p>Celebrate the seasons with special promotions and holiday events. Mark your calendar and save big at WonderPark!</p>
 
-            <aside>
-                <h3>Media Deal</h3>
-                <p>Follow us on social media for flash deals and early discounts !</p>
-            </aside>
-        </section>
-    </main>
-    <footer class="site_footer">
-        <p>&copy; 2025 Evan Berna | WonderPark</p>
-        <p>59 Grey Street, Wonder City, USA</p>
-        <a href="contact.html" class="footer_btn">Contact Us</a>
-    </footer> 
+      <!-- Seasonal Deals List -->
+      <article class="card">
+        <h2>Current Offers</h2>
+        <ul>
+          <li><strong>Lovers Lane 💘:</strong> Buy 1 Ticket, Get 1 Free — <mark>Valid Feb 14</mark></li>
+          <li><strong>Summer Swim ☀️:</strong> Family 4-Pack for <mark>$169.99</mark> — <mark>Valid June–Sept</mark></li>
+          <li><strong>Halloween Terror Nights 🎃:</strong> Buy 1, Get Next Entry Free (One Time Use) — <mark>Valid Oct</mark></li>
+          <li><strong>Santa’s Wonder Park 🎅:</strong> Family 4-Pack for <mark>$199.99</mark> — <mark>Valid Dec</mark></li>
+        </ul>
+      </article>
+
+      <!-- Media Promo Aside -->
+      <aside class="card">
+        <h3>Follow for More!</h3>
+        <p>Stay tuned on social media for flash deals, giveaways, and exclusive early-bird discounts.</p>
+        <p>
+          <a href="https://facebook.com" target="_blank">Facebook</a> | 
+          <a href="https://instagram.com" target="_blank">Instagram</a> | 
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+        </p>
+      </aside>
+
+      <!-- Embedded Media -->
+      <figure>
+        <video width="320" height="240" controls>
+          <source src="media/seasonal-promo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <figcaption>Watch our seasonal promo reel!</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site_footer">
+    <p>&copy; 2025 Evan Berna | WonderPark</p>
+    <address>59 Grey Street, Wonder City, USA</address>
+    <a href="contact.html" class="footer_btn">Contact Us</a>
+  </footer>
 </body>
 </html>
