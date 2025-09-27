@@ -1,71 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dining</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderPark | Contact Us</title>
+  <link rel="icon" href="images/Parklogo.png" type="image/x-icon">
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #004aad;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
+    header img {
+      height: 60px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin: 0 10px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background-color: #ffcc00;
+      color: #fff;
+    }
+    main {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: black;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #ffcc00;
+      color: #fff;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    form button:hover {
+      background-color: #ff3333;
+    }
+    a {
+      color: #004aad;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+    .footer_btn {
+      display: inline-block;
+      background: #cc0000;
+      color: #fff;
+      padding: 8px 14px;
+      margin-top: 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .footer_btn:hover {
+      background: #ff4444;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-footer">
-        <div class="wrap header-inner">
-            <a class="brand" href="index.html">
-                <img src="images/_vSJgdVGA692P7st7PmYW~200-1.png" alt="wonder park logo">
-            </a>
-            <nav>
-                <ul class="main_nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tickets.html">Tickets</a></li>
-                    <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
-                    <li><a href="dining.html">Dining</a></li>
-                    <li><a href="rides.html">Rides</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="map.html">Map</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="help_faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <main class="wrap">
-        <section class="card">
-            <h1>Contact Us</h1>
-            <p>Fill out this form or follow the details below.</p>
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/Parklogo.png" alt="WonderPark logo">
+      </a>
+      <nav>
+        <ul class="main_nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+          <li><a href="seasonal_deals.html">Seasonal Deals</a></li>
+          <li><a href="dining.html">Dining</a></li>
+          <li><a href="rides.html">Rides</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+          <li><a href="help_faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- ====== MAIN CONTENT ====== -->
+  <main class="wrap">
+    <section class="card">
+      <h1>Contact Us</h1>
+      <p>Fill out the form below or use the other contact options provided.</p>
 
-            <form action="#" method="post" class="card">
-                <label for="fullname">Full Name</label>
-                <input id="fullname" name="fullname" type="text" required>
+      <!-- Contact Form -->
+      <form action="#" method="post" class="card">
+        <label for="fullname">Full Name</label>
+        <input id="fullname" name="fullname" type="text" required>
 
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
 
-                <label for="topic">Topic</label>
-                <select id="topic" name="topic">
-                    <option value="tickets">Tickets</option>
-                    <option value="rides">Rides</option>
-                    <option value="dining">Dining</option>
-                    <option value="other">Other</option>
-                </select>
+        <label for="topic">Topic</label>
+        <select id="topic" name="topic">
+          <option value="tickets">Tickets</option>
+          <option value="rides">Rides</option>
+          <option value="dining">Dining</option>
+          <option value="other">Other</option>
+        </select>
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="6"></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6"></textarea>
 
-                <button type="submit">Send Message</button>
-            </form>
+        <button type="submit">Send Message</button>
+      </form>
 
-            <section class="card">
-                <h2>Other ways to reach us</h2>
-                <p>Phone: <a href="tel:18004205959">1(800) 420-5959</a></p>
-                <p>Email: <a href="mailto:info@wonderpark.com">inf@wonderpark.com</a></p>
-                <P>Address: 59 Grey st, Wonder City Ca </P>
-            </section>
-        </section>
-    </main>
-    <footer class="site_footer">
-        <p>&copy; 2025 Evan Berna | WonderPark</p>
-        <p>59 Grey Street, Wonder City, USA</p>
-        <a href="contact.html" class="footer_btn">Contact Us</a>
-    </footer> 
+      <!-- Other Contact Info -->
+      <section class="card">
+        <h2>Other Ways to Reach Us</h2>
+        <p>Phone: <a href="tel:18004205959">1 (800) 420-5959</a></p>
+        <p>Email: <a href="mailto:info@wonderpark.com">info@wonderpark.com</a></p>
+        <p>Address: 59 Grey Street, Wonder City, CA</p>
+      </section>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site_footer">
+    <p>&copy; 2025 Evan Berna | WonderPark</p>
+    <p>59 Grey Street, Wonder City, USA</p>
+    <a href="contact.html" class="footer_btn">Contact Us</a>
+  </footer> 
 </body>
 </html>
